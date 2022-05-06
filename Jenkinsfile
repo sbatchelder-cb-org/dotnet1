@@ -15,8 +15,10 @@ spec:
 
     stages {
         stage('Example Build') {
-            steps {
-                sh "dotnet -help"
+            container('dotnet6') {
+                steps {
+                    sh "dotnet -help"
+                }
             }
         }
     }
