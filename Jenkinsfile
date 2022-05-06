@@ -18,7 +18,11 @@ spec:
             steps {
                 container('dotnet6') {
                     sh "dotnet --help"
+                    sh "dotnet build"
+                    sh "dotnet clean"
+                    sh "dotnet test"
                     sh "dotnet run"
+                    sh "dotnet publish"
                 }
             }
         }
