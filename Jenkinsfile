@@ -16,7 +16,7 @@ spec:
     stages {
         stage('Example Build') {
             steps {
-                bat "dotnet -help"
+                sh "dotnet -help"
             }
         }
     }
